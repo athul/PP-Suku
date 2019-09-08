@@ -25,7 +25,7 @@ SECRET_KEY = '6=7pxw4gk-hu%vjp1d#kmt+7w5gx24g_t-6oy+ul1r2tssmyj5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -131,3 +131,6 @@ MEDIA_ROOT=os.path.join(BASE_DIR, 'upload')
 }
  """
 CORS_ORIGIN_ALLOW_ALL = True
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
