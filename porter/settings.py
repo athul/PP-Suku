@@ -122,8 +122,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'upload')
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
@@ -139,6 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 }
  """
 CORS_ORIGIN_ALLOW_ALL = True
+
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
