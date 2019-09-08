@@ -20,6 +20,8 @@ media
 *.py[cod]
 *$py.class
 
+generator/migrations/*.py
+
 # C extensions
 *.so
 
@@ -137,3 +139,5 @@ dmypy.json
 .pyre/
 upload/
 # End of https://www.gitignore.io/api/django
+generator/migrations/0001_initial.py
+generator/migrations/0001_initial.py
