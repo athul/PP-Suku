@@ -2,11 +2,11 @@ from django.db import models
 
 # Create your models here.
 class user(models.Model):
-    Name=models.CharField(max_length=100)
-    About=models.TextField(blank=True)
-    College=models.CharField(max_length=100)
+    Name=models.CharField(max_length=100,default="")
+    About=models.TextField(blank=True,default="")
+    College=models.CharField(max_length=100,default="")
     Phone=models.PositiveIntegerField(blank=True)
-    Email=models.EmailField(max_length=254)
+    Email=models.EmailField(max_length=254,default="")
     Designations=models.CharField(max_length=150,default="")
     #Skills
     Skill1=models.CharField(max_length=100,default="")
