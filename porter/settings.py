@@ -25,7 +25,7 @@ SECRET_KEY = '6=7pxw4gk-hu%vjp1d#kmt+7w5gx24g_t-6oy+ul1r2tssmyj5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com','*'   ]
 
 
 # Application definition
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'porter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,9 +126,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'upload')
 # Extra lookup directories for collectstatic to find static files
-STATICFILES_DIRS = (
+""" STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-)
+) """
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -139,6 +139,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 }
  """
 CORS_ORIGIN_ALLOW_ALL = True
+
+LOGIN_REDIRECT_URL = '/'
 
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)

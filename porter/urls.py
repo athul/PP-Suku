@@ -22,5 +22,6 @@ router=routers.DefaultRouter()
 router.register('User',UserAPI)
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('',include(router.urls))
 ]
