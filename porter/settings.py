@@ -126,9 +126,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'upload')
 # Extra lookup directories for collectstatic to find static files
-""" STATICFILES_DIRS = (
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-) """
+)
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
