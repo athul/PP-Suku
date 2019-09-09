@@ -5,6 +5,6 @@ from .serializers import UserSerializer
 from django.contrib.auth.mixins import LoginRequiredMixin# Create your views here.
 
 class UserAPI(LoginRequiredMixin,viewsets.ModelViewSet):
-    login_url = '/login/'
+    login_url = 'accounts/login/'
     queryset=user.objects.all()
     serializer_class=UserSerializer
