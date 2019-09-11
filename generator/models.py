@@ -1,11 +1,12 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 class user(models.Model):
     Name=models.CharField(max_length=100,default="")
-    About=models.TextField(blank=True,default="")
+    Bio=models.TextField(blank=True,default="")
     College=models.CharField(max_length=100,default="")
-    Phone=models.PositiveIntegerField(blank=True)
+    dob=models.DateField(default=datetime.date.today())
+    Phone=models.BigIntegerField(blank=True)
     Email=models.EmailField(max_length=254,default="")
     Designations=models.CharField(max_length=150,default="")
     #Skills
@@ -14,10 +15,10 @@ class user(models.Model):
     Skill3=models.CharField(max_length=100,blank=True,default="")
     Skill4=models.CharField(max_length=100,blank=True,default="")
     #Profiles
-    GitHub=models.URLField(max_length=150,blank=True,default="")
-    Twitter=models.URLField(max_length=150,blank=True,default="")
-    LinkedIn=models.URLField(max_length=150,blank=True,default="")
-    Instagram=models.URLField(max_length=150,blank=True,default="")
+    GitHub=models.CharField(max_length=150,blank=True,default="")
+    Twitter=models.CharField(max_length=150,blank=True,default="")
+    LinkedIn=models.CharField(max_length=150,blank=True,default="")
+    Instagram=models.CharField(max_length=150,blank=True,default="")
     #Projects
     Project1=models.CharField(max_length=50,default="")
     Project1desc=models.CharField(max_length=150,default="")
@@ -32,6 +33,6 @@ class user(models.Model):
     Project4desc=models.CharField(max_length=150,default="")
     Projecturl4=models.URLField(max_length=150,default="")
     #Images
-    image=models.FileField(upload_to='upload',default='Your Image')
+    #image=models.FileField(upload_to='upload',default='Your Image')
     def __str__(self):
         return self.Name
