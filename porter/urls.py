@@ -16,13 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
-from generator.views import UserAPI
-
+from generator.views import UserAPI,mainAPI
+from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
+router.register('ID',mainAPI)
 urlpatterns = [
     path('', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
-    path('api-auth/',include('rest_framework.urls'))
+    path('api-auth/',include('rest_framework.urls')),
+    path('api/token/',TokenObtainPairView.as_view()),
+    path('api/token/refresh',TokenRefreshView.as_view())
 ]

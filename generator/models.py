@@ -1,6 +1,9 @@
 from django.db import models
 import datetime
 # Create your models here.
+class main(models.Model):
+    id=models.AutoField(primary_key=True)
+    Users=models.ForeignKey('user',on_delete=models.CASCADE)
 class user(models.Model):
     Name=models.CharField(max_length=100,default="")
     Bio=models.TextField(blank=True,default="")
