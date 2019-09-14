@@ -12,15 +12,15 @@ const UserData = ({ udatas }) => {
               color:`crimson`
             }}>
                 <center><img src={"https://avatars1.githubusercontent.com/"+udata.GitHub+"?size=200"} alt=""/><br/>
-                <p className="title">{udata.Name}</p>
+                <p className="title has-text-danger">{udata.Name}</p>
               </center>
                 <center>
-                <h6 className="card-title"><u>About </u>: {udata.Bio}</h6>
-                <h6 className="card-title" style={{color:`SLATEBLUE`}}><u>College</u>: {udata.College}</h6>
-                <h6 className="card-title"><u>Date of Birth</u>: {udata.dob}</h6>
-                <h6 className="card-title"><u>Phone</u>: {udata.Phone}</h6>
-                <h6 className="card-title"><u>Email</u>: {udata.Email}</h6>
-                <h6 className="card-title" style={{color:`SLATEBLUE`}}>{udata.Designations}</h6>
+                <h6 className="is-size-3"><u>About </u>: {udata.Bio}</h6>
+                <h6 className="is-size-3" style={{color:`SLATEBLUE`}}><u>College</u>: {udata.College}</h6>
+                <h6 className="is-size-3"><u>Date of Birth</u>: {udata.dob}</h6>
+                <h6 className="is-size-3"><u>Phone</u>: {udata.Phone}</h6>
+                <h6 className="is-size-3"><u>Email</u>: {udata.Email}</h6>
+                <h6 className="is-size-3" style={{color:`SLATEBLUE`}}>{udata.Designations}</h6>
                 <span>
                 <Link px={3} variant='nav' href= {"https://github.com/"+udata.GitHub}><GitHub size='36' color='black'/></Link>
                 <Link px={3} variant='nav' href={"https://twitter.com/"+udata.Twitter}><Twitter size='36' color='aqua'/></Link>
