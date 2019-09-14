@@ -21,7 +21,7 @@ from generator.views import UserAPI
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
 urlpatterns = [
-    path('', admin.site.urls),
+    path('', include('frontend.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
     path('api-auth/',include('rest_framework.urls'))
