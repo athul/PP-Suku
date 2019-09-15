@@ -81,7 +81,7 @@ const UserData = ({ udatas }) => {
                 flipOnHover={true}
                 flipDirection="vertical">
               <FrontSide >
-            <img src="https://cdn.pixabay.com/photo/2019/08/02/09/39/mugunghwa-4379251_960_720.jpg" class="card-img-top" alt="" />
+            <img src="https://cdn.pixabay.com/photo/2019/08/02/09/39/mugunghwa-4379251_960_720.jpg" className="card-img-top" alt="" />
             <h5>{udata.Project2}</h5>
           </FrontSide>
             <BackSide style={{ backgroundColor:'aqua'}}>
@@ -97,7 +97,7 @@ const UserData = ({ udatas }) => {
               flipOnHover={true}
               flipDirection="vertical">
               <FrontSide>
-            <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" width="501" height="334" class=""  alt="" />
+            <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" width="501" height="334" className=""  alt="" />
             <h5>{udata.Project3}</h5>
           </FrontSide>
             <BackSide style={{ backgroundColor:'aqua'}}>
@@ -108,7 +108,7 @@ const UserData = ({ udatas }) => {
         </BackSide>
           </Flippy></div>
 
-        <div class="column">
+        <div className="column">
             <Flippy
               flipOnHover={true}
               flipDirection="horizontal">
