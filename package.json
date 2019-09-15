@@ -1,0 +1,41 @@
+{
+    "name": "PP-Suku",
+    "version": "1.0.0",
+    "description": "Basically PP-Suku is a Portfolio Generator made with Django,DRF and React. You Provide it data and PP-Suku will create a Portfolio website for you",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+        "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/frontend/main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/athul/PP-Suku.git"
+    },
+    "keywords": [],
+    "author": "Athul Cyriac Ajay",
+    "license": "SEE LICENSE IN LICENSE",
+    "bugs": {
+        "url": "https://github.com/athul/PP-Suku/issues"
+    },
+    "homepage": "https://github.com/athul/PP-Suku#readme",
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.6",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "css-loader": "^3.2.0",
+        "style-loader": "^1.0.0",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.8"
+    },
+    "dependencies": {
+        "axios": "^0.19.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-feather": "^2.0.3",
+        "react-flippy": "^0.1.5",
+        "rebass": "^4.0.5"
+    }
+}
