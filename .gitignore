@@ -141,3 +141,4 @@ upload/
 # End of https://www.gitignore.io/api/django
 generator/migrations/0001_initial.py
 generator/migrations/0001_initial.py
+node_modules
