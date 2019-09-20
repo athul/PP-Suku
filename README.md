@@ -8,8 +8,8 @@ PP-Suku is a Work in progress :sweaty_smile:
 ![](Peek%202019-09-09%2012-15.gif)
 
 Needed Stuff
-- [] GitHub Action Script
-- [] Better UI
-- [] Authentications and Stuff
-- [] Downloadable Build Files to Host Anywhere
-- [] Better Forms to Input Data
+- [ ] GitHub Action Script
+- [ ] Better UI
+- [ ] Authentications and Stuff
+- [ ] Downloadable Build Files to Host Anywhere
+- [ ] Better Forms to Input Data
