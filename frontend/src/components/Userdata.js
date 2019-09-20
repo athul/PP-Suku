@@ -1,5 +1,6 @@
 import React from 'react'
 import {Box,Card,Text,Button,Link} from 'rebass'
+import {Helmet} from "react-helmet"
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import {GitHub,Instagram,Twitter,Linkedin} from 'react-feather'
 const UserData = ({ udatas }) => {
@@ -8,6 +9,10 @@ const UserData = ({ udatas }) => {
 
         {data.map((udata) => (
         <div className="card" >
+          <Helmet>
+            <link rel="shortcut icon" type="image/png" href={"https://avatars1.githubusercontent.com/"+udata.GitHub+"?size=16"}/>
+            <title>{udata.Name}</title>
+          </Helmet>
             <div className="card-body" style={{
               color:`crimson`
             }}>
