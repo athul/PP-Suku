@@ -19,6 +19,7 @@ const UserData = ({ udatas }) => {
                 <center><img src={"https://avatars1.githubusercontent.com/"+udata.GitHub+"?size=200"} alt=""/><br/>
                 <p className="title has-text-danger">{udata.Name}</p>
               </center>
+              
                 <center>
                 <h6 className="is-size-3"><u>About </u>: {udata.Bio}</h6>
                 <h6 className="is-size-3" style={{color:`SLATEBLUE`}}><u>College</u>: {udata.College}</h6>
@@ -34,7 +35,7 @@ const UserData = ({ udatas }) => {
                 </span>
                 </center>
             </div >
-            <div className="container">
+            <div className="box-shadow-large p-3">
             <div className="columns">
               <div className="column">
                 <Box width={256} bg='#ffddaa' color='white'>
@@ -90,7 +91,7 @@ const UserData = ({ udatas }) => {
             <h5>{udata.Project2}</h5>
           </FrontSide>
             <BackSide style={{ backgroundColor:'aqua'}}>
-            <div className="card-body" style={{width:`18rem`}}>
+            <div  style={{width:`18rem`}}>
             <p className="card-text">{udata.Project2desc}</p>
             <a href={udata.Projecturl2} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div>
@@ -106,7 +107,7 @@ const UserData = ({ udatas }) => {
             <h5>{udata.Project3}</h5>
           </FrontSide>
             <BackSide style={{ backgroundColor:'aqua'}}>
-          <div className="card-body" style={{width:`18rem`}}>
+          <div className="card-content" style={{width:`18rem`}}>
             <p className="card-text">{udata.Project3desc}</p>
             <a href={udata.Projecturl3}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
           </div>
