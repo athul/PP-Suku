@@ -10,8 +10,7 @@ class userType(DjangoObjectType):
 class Query(object):
     user=graphene.Field(userType,id=graphene.Int())
     all_users=graphene.List(userType)
-    def resolve_user(self,info,**kwargs):
-        id=kwargs('id')
+    def resolve_user(self,info,id=None,**kwargs):
         if id is not None:
             return user.objects.get(pk=id)
         return None

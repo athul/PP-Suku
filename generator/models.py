@@ -6,7 +6,7 @@ class user(models.Model):
     Bio=models.TextField(blank=True,default="")
     College=models.CharField(max_length=100,default="")
     dob=models.DateField(default=datetime.date.today())
-    Phone=models.BigIntegerField(blank=True)
+    Phone=models.CharField(max_length=150,blank=True)
     Email=models.EmailField(max_length=254,default="")
     Designations=models.CharField(max_length=150,default="")
     #Skills
