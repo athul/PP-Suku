@@ -25,8 +25,9 @@ router=routers.DefaultRouter()
 router.register('User',UserAPI)
 urlpatterns = [
     path('', include('frontend.urls')),
+    path('admin/',admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
-    url(r'^graphql$', GraphQLView.as_view(graphiql=True,schema=schema)),
-    path('api-auth/',include('rest_framework.urls'))
+    url(r'^graphql$', GraphQLView.as_view(graphiql=True, schema=schema)),
+    path('api-auth/',include('rest_framework.urls')),
 ]
