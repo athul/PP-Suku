@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
+from graphene_django.views import GraphQLView
 from generator.views import UserAPI
+from django.conf.urls import url
+from porter.schema import schema
 
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
@@ -24,5 +27,6 @@ urlpatterns = [
     path('', include('frontend.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
+    url(r'^graphql$', GraphQLView.as_view(graphiql=True,schema=schema)),
     path('api-auth/',include('rest_framework.urls'))
 ]

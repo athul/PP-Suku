@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'generator',
     'rest_framework',
     'frontend',
-    'corsheaders'
+    'corsheaders',
+    'graphene_django'
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,7 @@ LOGIN_REDIRECT_URL = '/'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+GRAPHENE = {
+    'SCHEMA': 'porter.schema.schema'
+}
