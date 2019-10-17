@@ -5,15 +5,20 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+black = "*"
 
 [packages]
-django = "*"
+django = "~=2.2"
 djangorestframework = "*"
 django-cors-headers = "*"
 gunicorn = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 whitenoise = "*"
+graphene-django = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
