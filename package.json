@@ -37,6 +37,7 @@
         "react-feather": "^2.0.3",
         "react-flippy": "^0.1.5",
         "react-helmet": "^5.2.1",
-        "rebass": "^4.0.5"
+        "rebass": "^4.0.5",
+        "urql": "^1.6.1"
     }
 }
