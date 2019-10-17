@@ -3,11 +3,53 @@ import {Box,Card,Text,Button,Link} from 'rebass'
 import {Helmet} from "react-helmet"
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import {GitHub,Instagram,Twitter,Linkedin} from 'react-feather'
-const UserData = ({ udatas }) => {
-  let data=Array.from(udatas);
-    return (<div>
+import {Query} from 'urql'
 
-        {data.map((udata) => (
+const data=`
+  query udata {
+    user(id: 1) {
+      Name
+      Bio
+      College
+      dob
+      Phone
+      Email
+      Designations
+      Skill1
+      Skill2
+      Skill3
+      Skill4
+      GitHub
+      Twitter
+      LinkedIn
+      Instagram
+      Project1
+      Project1desc
+      Projecturl1
+      Project2
+      Project2desc
+      Projecturl2
+      Project3
+      Project3desc
+      Projecturl3
+      Project4
+      Project4desc
+      Projecturl4
+    }
+  }
+
+`
+const UserData = () => (
+  <Query query={data}>
+    {({ fetching, data, error, extensions }) => {
+      if (fetching) {
+        return 'Loading...';
+      } else if (error) {
+        return 'Oh no!';
+      }
+
+    return (<div>
+        {data.user.map((udata) => (
         <div className="card" >
           <Helmet>
             <link rel="shortcut icon" type="image/png" href={"https://avatars1.githubusercontent.com/"+udata.GitHub+"?size=16"}/>
@@ -134,6 +176,7 @@ const UserData = ({ udatas }) => {
         </div>
 
         ))}
-    </div>)
-};
+    </div>)}}
+    </Query>
+)
 export default UserData
