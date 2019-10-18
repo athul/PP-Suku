@@ -16,6 +16,7 @@ psycopg2 = "*"
 dj-database-url = "*"
 whitenoise = "*"
 graphene-django = "*"
+django-graphql-jwt = "*"
 
 [requires]
 python_version = "3.7"

@@ -6,13 +6,13 @@ class Users extends React.Component {
   state = {
     users: []
   }
-  componentDidMount() {
+ componentDidMount() {
     axios.get('http://localhost:8000/API/User/')
       .then(res => {
         this.setState({
           users: res.data
         })
-        console.log(res.data)
+        console.log("Got 🌝 it")
       })
   }
   render() {
