@@ -20,6 +20,7 @@ from graphene_django.views import GraphQLView
 from generator.views import UserAPI
 from django.conf.urls import url
 from porter.schema import schema
+from django.views.decorators.csrf import csrf_exempt
 
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
@@ -28,6 +29,6 @@ urlpatterns = [
     path('admin/',admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
-    url(r'^graphql$', GraphQLView.as_view(graphiql=True, schema=schema)),
+    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
     path('api-auth/',include('rest_framework.urls')),
 ]
