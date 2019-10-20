@@ -78,6 +78,8 @@ WSGI_APPLICATION = "porter.wsgi.application"
 
 GRAPHENE = {
     "SCHEMA": "porter.schema.schema",
+    'SCHEMA_OUTPUT': 'schema.json',
+    'SCHEMA_INDENT': 2,
     "MIDDLEWARE": ["graphql_jwt.middleware.JSONWebTokenMiddleware"],
 }
 # Database
