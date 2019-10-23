@@ -47,13 +47,11 @@ const UserData = () => {
       } else if (result.error) {
         return "Wabba Lubba Dubb Dubbb";
       }
-      console.log(result.data.user)
-        console.log(typeof(result))
+        /* console.log(result.data.user)
+        console.log(typeof(result)) */
         const tres=result.data.user
-        console.log(tres)
-        console.log(typeof(tres))
-
-        //baaki work aakunilla, check console msgs
+        /* console.log(tres)
+        console.log(typeof(tres)) */
     return (
     <div>
         <div className="card" >
