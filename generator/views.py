@@ -10,6 +10,9 @@ class UserAPI(viewsets.ModelViewSet):
     serializer_class=UserSerializer
     permission_classes=(permissions.IsAuthenticatedOrReadOnly,)
 
-def user_new():
+def index(request):
+    return render(request, 'generator/index.html')
+
+def user_new(request):
     form=userForm
-    return render(request, 'blog/post_edit.html', {'form': form})
+    return render(request, 'generator/index.html', {'form': form})

@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
 from graphene_django.views import GraphQLView
-from generator.views import UserAPI
+from generator.views import UserAPI,index
 from django.conf.urls import url
 from porter.schema import schema
 from django.views.decorators.csrf import csrf_exempt
@@ -25,8 +25,9 @@ from django.views.decorators.csrf import csrf_exempt
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
 urlpatterns = [
-    path('', include('frontend.urls')),
+    path('pages/', include('frontend.urls')),
     path('admin/',admin.site.urls),
+    path('test/', include('generator.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
     path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),

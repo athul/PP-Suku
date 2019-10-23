@@ -47,22 +47,20 @@ const UserData = () => {
       } else if (result.error) {
         return "Wabba Lubba Dubb Dubbb";
       }
-        /* console.log(result.data.user)
-        console.log(typeof(result)) */
+
         const tres=result.data.user
-        /* console.log(tres)
-        console.log(typeof(tres)) */
+        
     return (
     <div>
         <div className="card" >
           <Helmet>
-            <link rel="shortcut icon" type="image/png" href={"https://avatars1.githubusercontent.com/"+GitHub+"?size=16"}/>
+            <link rel="shortcut icon" type="image/png" href={"https://avatars1.githubusercontent.com/"+tres.GitHub+"?size=16"}/>
             <title>{tres.Name}</title>
           </Helmet>
             <div className="card-body" style={{
               color:`crimson`
             }}>
-                <center><img src={"https://avatars1.githubusercontent.com/"+GitHub+"?size=200"} alt=""/><br/>
+                <center><img src={"https://avatars1.githubusercontent.com/"+tres.GitHub+"?size=200"} alt=""/><br/>
                 <p className="title has-text-danger">{tres.Name}</p>
               </center>
               
@@ -178,8 +176,7 @@ const UserData = () => {
             </div></div>
             </center>
         </div>
+        </div>)
+        }
 
-        )}
-        </div>);
-    };
 export default UserData
