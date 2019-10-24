@@ -6,4 +6,5 @@ from . import views
 router.register('User',views.UserAPI) """
 urlpatterns = [
         path('',views.index, name='index'),
+        #path('/add',views.user_new,name='useradd'),
 ]

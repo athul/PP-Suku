@@ -1,0 +1,8 @@
+{% extends "generator/index.html" %}
+
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_table }} aa
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form> 
+{% endblock content %}

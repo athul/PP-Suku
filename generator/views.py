@@ -14,5 +14,11 @@ def index(request):
     return render(request, 'generator/index.html')
 
 def user_new(request):
-    form=userForm
-    return render(request, 'generator/index.html', {'form': form})
+    form=userForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        form=userForm()
+    context={
+        'form':form
+    }
+    return render(request, 'generator/useradd.html',context)
