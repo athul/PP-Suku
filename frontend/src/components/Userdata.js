@@ -7,7 +7,7 @@ import {useQuery} from 'urql'
 
 const dataQuery=`
   query {
-    user(id: 1) {
+    user(id: 42) {
       Name
       Bio
       College
