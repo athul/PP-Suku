@@ -35,5 +35,5 @@ urlpatterns = [
     path('API/',include(router.urls)),
     path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
     path('api-auth/',include('rest_framework.urls')),
-    path('playground',GraphQLPlaygroundView.as_view(endpoint="http://127.0.0.1:8000/graphql/"))
+    path('playground/',GraphQLPlaygroundView.as_view(endpoint="http://127.0.0.1:8000/graphql/"))
 ]
