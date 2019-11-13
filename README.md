@@ -4,8 +4,8 @@
 ## What the F is this?
 Basically PP-Suku is a Fun Side Project. I was a bit High on Coffee when I named this.(Suku is a name here for making Fun(no-offense))     
 
-## Run this locally and wanna test this out?
-Just go through these step by step. I'm assuming you've got **Python=3.x and node** installed
+## Run this locally and wanna try this out?
+Just go through these step by step. I'm assuming you've got **Python=3.x and Node** installed
 
 1. Create a Virtual Environment for python with either Pipenv or Virtualenv 
 2. Install the dependencies with either `pipenv install` or `pip install -r requirments.txt`
@@ -16,7 +16,8 @@ python manage.py migrate && python manage.py createsuperuser && python manage.py
 4. *N.B The Username and password can be any of your choice and you can find the server in* `localhost:8000` . Add your data too in the Admin Dashboard.
 5. Now We need to install React& its dependencies, Run `yarn install` or `npm install`
 6. We need to run the webpack server for compiling the JavaScript for that run `yarn dev` or `npm run dev`
-7. Now If you've added the data and check `localhost:8000` you can find the Portfolio page😄
+7. Now If you've added the data and check `localhost:8000/pages` you can find the Portfolio page😄
+8. If you want to run your *GraphQL Queries* goto `localhost:8000/playground` you'll be welcomed by a **Dark Mode** better UI GraphQL Playground. Run EM and find your peace✌️
 
 PP-Suku is a Work in progress :sweaty_smile:        
 ![](Peek%202019-09-09%2012-15.gif)

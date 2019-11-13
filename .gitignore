@@ -142,3 +142,4 @@ upload/
 generator/migrations/0001_initial.py
 generator/migrations/0001_initial.py
 node_modules
+.DS_Store

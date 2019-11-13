@@ -1,7 +1,7 @@
 {
     "name": "PP-Suku",
-    "version": "1.0.0",
-    "description": "Basically PP-Suku is a Portfolio Generator made with Django,DRF and React. You Provide it data and PP-Suku will create a Portfolio website for you",
+    "version": "1.1.0",
+    "description": "PP-Suku is a Portfolio Generator made with Django,GraphQL and React. You Provide it data and PP-Suku will create a Portfolio website for you",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
@@ -30,7 +30,7 @@
         "webpack-cli": "^3.3.8"
     },
     "dependencies": {
-        "axios": "^0.19.0",
+        "graphql": "^14.5.8",
         "prop-types": "^15.7.2",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
