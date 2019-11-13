@@ -17,18 +17,23 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework import routers
 from graphene_django.views import GraphQLView
-from generator.views import UserAPI
+from generator.views import UserAPI,index,user_new
 from django.conf.urls import url
 from porter.schema import schema
 from django.views.decorators.csrf import csrf_exempt
+from graphql_playground.views import GraphQLPlaygroundView
+
 
 router=routers.DefaultRouter()
 router.register('User',UserAPI)
 urlpatterns = [
-    path('', include('frontend.urls')),
+    path('pages/', include('frontend.urls')),
     path('admin/',admin.site.urls),
+    path('', include('generator.urls')),
+    path('add/',user_new),
     path('accounts/', include('django.contrib.auth.urls')),
     path('API/',include(router.urls)),
     path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
     path('api-auth/',include('rest_framework.urls')),
+    path('playground/',GraphQLPlaygroundView.as_view(endpoint="http://127.0.0.1:8000/graphql/"))
 ]

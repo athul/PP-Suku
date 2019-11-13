@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "frontend",
     "corsheaders",
     "graphene_django",
+    "graphql_playground"
 ]
 
 MIDDLEWARE = [

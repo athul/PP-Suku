@@ -1,0 +1,16 @@
+{% extends "generator/index.html" %}
+{% block content %}
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">PP-Suku</h3>
+  <p> Add your Details Below</p>
+</div>
+<div class="input-field col s6">
+<center>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form> 
+    </center>
+    </div>
+{% endblock content %}
+
