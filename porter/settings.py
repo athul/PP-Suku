@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "generator",
-    "rest_framework",
+    #"rest_framework",
     "frontend",
     "corsheaders",
     "graphene_django",
