@@ -9,16 +9,13 @@ black = "*"
 
 [packages]
 django = "~=2.2"
-djangorestframework = "*"
 django-cors-headers = "*"
 gunicorn = "*"
-psycopg2 = "*"
 dj-database-url = "*"
 whitenoise = "*"
 graphene-django = "*"
 django-graphql-jwt = "*"
 django-graphql-playground = "*"
-psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

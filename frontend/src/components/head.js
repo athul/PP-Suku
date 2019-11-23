@@ -9,11 +9,6 @@ query {
       Name
       Bio
       College
-<<<<<<< HEAD
-=======
-      dob
-      Phone
->>>>>>> 1dcb8e69c0b1b856f3521920a281928af1176cd8
       Email
       Designations
       GitHub
