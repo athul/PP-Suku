@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from rest_framework import routers
 from graphene_django.views import GraphQLView
 from generator.views import index,user_new
 from django.conf.urls import url
@@ -31,6 +30,5 @@ urlpatterns = [
     path('add/',user_new),
     path('accounts/', include('django.contrib.auth.urls')),
     path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True, schema=schema))),
-    path('api-auth/',include('rest_framework.urls')),
     path('playground/',GraphQLPlaygroundView.as_view(endpoint="http://127.0.0.1:8000/graphql"))
 ]
