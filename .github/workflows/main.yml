@@ -8,14 +8,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Notify Telegram
-      uses: yanzay/notify-telegram@v0.1.0
-      if: always()
-      with:
-        chat: ${{ secrets.chat }}
-        token: ${{ secrets.token }}
-        status: ${{ job.status }}
-
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
@@ -23,3 +15,10 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+    - name: Notify Telegram
+      uses: yanzay/notify-telegram@v0.1.0
+      if: always()
+      with:
+          chat: ${{ secrets.chat }}
+          token: ${{ secrets.token }}
+          status: ${{ job.status }}
