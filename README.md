@@ -27,4 +27,4 @@ Needed Stuff
 - [ ] Better UI
 - [ ] Authentications and Stuff
 - [ ] Downloadable Build Files to Host Anywhere
-- [ ] Better Forms to Input Data
+- [x] Better Forms to Input Data
