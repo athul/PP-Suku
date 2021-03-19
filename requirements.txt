@@ -9,7 +9,7 @@ Django==2.2.6
 django-cors-headers==3.1.1
 django-graphql-jwt==0.2.2
 django-graphql-playground==1.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 graphene==2.1.8
 graphene-django==2.6.0
 graphql-core==2.2.1
